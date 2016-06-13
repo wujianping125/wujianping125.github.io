@@ -4,6 +4,21 @@
   
     
     <entry>
+      <title><![CDATA[excel导入兼容]]></title>
+      <url>https://wujianping125.github.io/2016/06/13/excel%E5%AF%BC%E5%85%A5%E5%85%BC%E5%AE%B9/</url>
+      <content type="html"><![CDATA[<h3 id="excel导入兼容03-07版本"><a href="#excel导入兼容03-07版本" class="headerlink" title="excel导入兼容03 07版本"></a>excel导入兼容03 07版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//创建文件输入流对象</span><br><span class="line">InputStream is = new FileInputStream(file);</span><br><span class="line">//创建 POI文件系统对象</span><br><span class="line">Workbook wb = WorkbookFactory.create(is);</span><br><span class="line">//获取工作薄</span><br><span class="line">Sheet sheet = wb.getSheetAt(0);</span><br></pre></td></tr></table></figure>
+<p>依赖jar包：<br>dom4j-1.6.1.jar<br>poi-ooxml-3.8-20120326.jar<br>poi-3.8-20120326.jar<br>xbean.jar<br>poi-ooxml-schemas-3.8-20120326.jar </p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[文件导出乱码问题]]></title>
+      <url>https://wujianping125.github.io/2016/06/13/%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h3 id="文件导出-文件名乱码"><a href="#文件导出-文件名乱码" class="headerlink" title="文件导出,文件名乱码"></a>文件导出,文件名乱码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String filename = &quot;中文.csv&quot;;</span><br><span class="line">String agent = request.getHeader(&quot;User-Agent&quot;).toUpperCase();</span><br><span class="line">if(agent.indexOf(&quot;MSIE&quot;)&gt;=0 || agent.indexOf(&quot;TRIDENT&quot;)&gt;=0)&#123;</span><br><span class="line">	filename = URLEncoder.encode(filename, &quot;UTF-8&quot;);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	filename = new String(filename.getBytes(), &quot;ISO8859-1&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo]]></title>
       <url>https://wujianping125.github.io/2016/06/02/hexo/</url>
       <content type="html"><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
