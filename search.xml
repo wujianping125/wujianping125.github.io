@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[Illegal character 问题]]></title>
+      <url>https://wujianping125.github.io/2016/07/25/Illegal-character-%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.net.URISyntaxException: Illegal character in query at index <span class="number">59</span></span><br></pre></td></tr></table></figure>
+<h4 id="代码内容"><a href="#代码内容" class="headerlink" title="代码内容"></a>代码内容</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String url = <span class="string">"http://172.20.204.33:81/ifind/verify2?reqtype=verify_pubkey"</span>;</span><br><span class="line">HttpClient client = <span class="keyword">new</span> DefaultHttpClient();</span><br><span class="line">HttpGet httpget = <span class="keyword">new</span> HttpGet(url);</span><br><span class="line">HttpResponse response = client.execute(httpget);</span><br></pre></td></tr></table></figure>
+<h4 id="出现原因及解决方法"><a href="#出现原因及解决方法" class="headerlink" title="出现原因及解决方法"></a>出现原因及解决方法</h4><pre><code>地址中涉及了特殊字符，如‘｜’‘&amp;’等需要转译问题，所以不能直接用String代替URI来访问。必须采用%0xXX方式来替代特殊字符。
+可以先把String转成URL，再能过URL生成URI的方法来解决问题。
+</code></pre><h4 id="解决后代码"><a href="#解决后代码" class="headerlink" title="解决后代码"></a>解决后代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String strUrl = <span class="string">"http://172.20.204.33:81/ifind/verify2?reqtype=verify_pubkey"</span>;</span><br><span class="line">URL url = <span class="keyword">new</span> URL(strUrl);</span><br><span class="line"><span class="comment">//url.getAuthority()带端口80，url.getHost()不带端口 默认80</span></span><br><span class="line">URI uri = <span class="keyword">new</span> URI(url.getProtocol(), url.getAuthority(), url.getPath(), url.getQuery(), <span class="keyword">null</span>);</span><br><span class="line">HttpClient client = <span class="keyword">new</span> DefaultHttpClient();</span><br><span class="line">HttpGet httpget = <span class="keyword">new</span> HttpGet(uri);</span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Elasticsearch记录]]></title>
       <url>https://wujianping125.github.io/2016/06/14/Elasticsearch%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Elasticsearch是一个基于Lucene构建的开源分布式搜索服务器。<br>官网：<a href="https://www.elastic.co/" target="_blank" rel="external">https://www.elastic.co/</a><br>优点：<br>    完全支持 Apache Lucene 的接近实时的搜索。<br>    Elasticsearch是分布式的，自动分配的写入机制。<br>    易扩展，容错能力强。</p>
