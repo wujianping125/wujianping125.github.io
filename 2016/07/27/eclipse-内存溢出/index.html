@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="导入," />
+  <meta name="keywords" content="bug," />
 
 
 
@@ -84,19 +84,22 @@
 
 
 
-<meta name="description" content="excel导入兼容03 07版本123456//创建文件输入流对象InputStream is = new FileInputStream(file);//创建 POI文件系统对象Workbook wb = WorkbookFactory.create(is);//获取工作薄Sheet sheet = wb.getSheetAt(0);
-依赖jar包：dom4j-1.6.1.jarpoi-ooxm">
+<meta name="description" content="解决办法加VM参数： -Xms256M -Xmx512M -XX:PermSize=256m -XX:MaxPermSize=512m
+原理说明jvm管理的内存大致包括三种不同类型的内存区域：Permanent Generation space（永久保存区域）、Heap space(堆区域)、Java Stacks(Java栈）。
+其中永久保存区域主要存放Class（类）和Meta的信息，Clas">
 <meta property="og:type" content="article">
-<meta property="og:title" content="excel导入兼容">
-<meta property="og:url" content="https://wujianping125.github.io/2016/06/13/excel导入兼容/index.html">
+<meta property="og:title" content="eclipse 内存溢出">
+<meta property="og:url" content="https://wujianping125.github.io/2016/07/27/eclipse-内存溢出/index.html">
 <meta property="og:site_name" content="记忆云">
-<meta property="og:description" content="excel导入兼容03 07版本123456//创建文件输入流对象InputStream is = new FileInputStream(file);//创建 POI文件系统对象Workbook wb = WorkbookFactory.create(is);//获取工作薄Sheet sheet = wb.getSheetAt(0);
-依赖jar包：dom4j-1.6.1.jarpoi-ooxm">
-<meta property="og:updated_time" content="2016-06-14T11:26:40.488Z">
+<meta property="og:description" content="解决办法加VM参数： -Xms256M -Xmx512M -XX:PermSize=256m -XX:MaxPermSize=512m
+原理说明jvm管理的内存大致包括三种不同类型的内存区域：Permanent Generation space（永久保存区域）、Heap space(堆区域)、Java Stacks(Java栈）。
+其中永久保存区域主要存放Class（类）和Meta的信息，Clas">
+<meta property="og:updated_time" content="2016-07-27T08:48:13.635Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="excel导入兼容">
-<meta name="twitter:description" content="excel导入兼容03 07版本123456//创建文件输入流对象InputStream is = new FileInputStream(file);//创建 POI文件系统对象Workbook wb = WorkbookFactory.create(is);//获取工作薄Sheet sheet = wb.getSheetAt(0);
-依赖jar包：dom4j-1.6.1.jarpoi-ooxm">
+<meta name="twitter:title" content="eclipse 内存溢出">
+<meta name="twitter:description" content="解决办法加VM参数： -Xms256M -Xmx512M -XX:PermSize=256m -XX:MaxPermSize=512m
+原理说明jvm管理的内存大致包括三种不同类型的内存区域：Permanent Generation space（永久保存区域）、Heap space(堆区域)、Java Stacks(Java栈）。
+其中永久保存区域主要存放Class（类）和Meta的信息，Clas">
 
 
 
@@ -117,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="https://wujianping125.github.io/2016/06/13/excel导入兼容/"/>
+  <link rel="canonical" href="https://wujianping125.github.io/2016/07/27/eclipse-内存溢出/"/>
 
-  <title> excel导入兼容 | 记忆云 </title>
+  <title> eclipse 内存溢出 | 记忆云 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -281,7 +284,7 @@
             
             
               
-                excel导入兼容
+                eclipse 内存溢出
               
             
           </h1>
@@ -293,8 +296,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-13T19:32:02+08:00" content="2016-06-13">
-              2016-06-13
+            <time itemprop="dateCreated" datetime="2016-07-27T16:21:23+08:00" content="2016-07-27">
+              2016-07-27
             </time>
           </span>
 
@@ -307,8 +310,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/文件导入导出/" itemprop="url" rel="index">
-                    <span itemprop="name">文件导入导出</span>
+                  <a href="/categories/bug/" itemprop="url" rel="index">
+                    <span itemprop="name">bug</span>
                   </a>
                 </span>
 
@@ -323,8 +326,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/13/excel导入兼容/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/13/excel导入兼容/" itemprop="commentsCount"></span>
+                <a href="/2016/07/27/eclipse-内存溢出/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/27/eclipse-内存溢出/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -347,8 +350,15 @@
       
 
       
-        <h3 id="excel导入兼容03-07版本"><a href="#excel导入兼容03-07版本" class="headerlink" title="excel导入兼容03 07版本"></a>excel导入兼容03 07版本</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建文件输入流对象</span></span><br><span class="line">InputStream is = <span class="keyword">new</span> FileInputStream(file);</span><br><span class="line"><span class="comment">//创建 POI文件系统对象</span></span><br><span class="line">Workbook wb = WorkbookFactory.create(is);</span><br><span class="line"><span class="comment">//获取工作薄</span></span><br><span class="line">Sheet sheet = wb.getSheetAt(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-<p>依赖jar包：<br>dom4j-1.6.1.jar<br>poi-ooxml-3.8-20120326.jar<br>poi-3.8-20120326.jar<br>xbean.jar<br>poi-ooxml-schemas-3.8-20120326.jar </p>
+        <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>加VM参数： -Xms256M -Xmx512M -XX:PermSize=256m -XX:MaxPermSize=512m</p>
+<h3 id="原理说明"><a href="#原理说明" class="headerlink" title="原理说明"></a>原理说明</h3><p>jvm管理的内存大致包括三种不同类型的内存区域：Permanent Generation space（永久保存区域）、Heap space(堆区域)、Java Stacks(Java栈）。</p>
+<p>其中永久保存区域主要存放Class（类）和Meta的信息，Class第一次被Load的时候被放入PermGen space区域，Class需要存储的内容主要包括方法和静态属性。堆区域用来存放Class的实例（即对象），对象需要存储的内容主要是非静态属性。每次用new创建一个对象实例后，对象实例存储在堆区域中，这部分空间也被jvm的垃圾回收机制管理。而Java栈跟大多数编程语言包括汇编语言的栈功能相似，主要基本类型变量以及方法的输入输出参数。Java程序的每个线程中都有一个独立的堆栈。</p>
+<h3 id="三种内存溢出"><a href="#三种内存溢出" class="headerlink" title="三种内存溢出"></a>三种内存溢出</h3><h4 id="一、-OutOfMemoryError：-PermGen-space"><a href="#一、-OutOfMemoryError：-PermGen-space" class="headerlink" title="一、 OutOfMemoryError： PermGen space"></a>一、 OutOfMemoryError： PermGen space</h4><p>增加java虚拟机中的XX:PermSize和XX:MaxPermSize参数的大小，其中XX:PermSize是初始永久保存区域大小，XX:MaxPermSize是最大永久保存区域大小。</p>
+<h4 id="二、-OutOfMemoryError：-Java-heap-space"><a href="#二、-OutOfMemoryError：-Java-heap-space" class="headerlink" title="二、 OutOfMemoryError： Java heap space"></a>二、 OutOfMemoryError： Java heap space</h4><ol>
+<li>检查程序，看是否有死循环或不必要地重复创建大量对象。找到原因后，修改程序和算法。</li>
+<li>增加Java虚拟机中Xms（初始堆大小）和Xmx（最大堆大小）参数的大小。 </li>
+</ol>
+<h4 id="三、-OutOfMemoryError：unable-to-create-new-native-thread"><a href="#三、-OutOfMemoryError：unable-to-create-new-native-thread" class="headerlink" title="三、 OutOfMemoryError：unable to create new native thread"></a>三、 OutOfMemoryError：unable to create new native thread</h4><p>针对无法创建更多本地线程的情况，调整线程栈的大小，添加-Xss选项<br>JAVA_OPTS=”-Xms2048M -Xmx2048M -Xmn512M -Xss256k -XX:PermSize=512M…”</p>
 
       
     </div>
@@ -370,7 +380,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/导入/" rel="tag">#导入</a>
+            <a href="/tags/bug/" rel="tag">#bug</a>
           
         </div>
       
@@ -379,17 +389,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/13/文件导出乱码问题/" rel="next" title="文件导出乱码问题">
-                <i class="fa fa-chevron-left"></i> 文件导出乱码问题
+              <a href="/2016/07/26/ajax方法局限性/" rel="next" title="ajax方法局限性">
+                <i class="fa fa-chevron-left"></i> ajax方法局限性
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/13/CSV导出工具类/" rel="prev" title="CSV导出工具类">
-                CSV导出工具类 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -421,8 +427,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/13/excel导入兼容/"
-           data-title="excel导入兼容" data-url="https://wujianping125.github.io/2016/06/13/excel导入兼容/">
+      <div class="ds-thread" data-thread-key="2016/07/27/eclipse-内存溢出/"
+           data-title="eclipse 内存溢出" data-url="https://wujianping125.github.io/2016/07/27/eclipse-内存溢出/">
       </div>
     
   </div>
@@ -513,7 +519,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#excel导入兼容03-07版本"><span class="nav-number">1.</span> <span class="nav-text">excel导入兼容03 07版本</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">1.</span> <span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原理说明"><span class="nav-number">2.</span> <span class="nav-text">原理说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三种内存溢出"><span class="nav-number">3.</span> <span class="nav-text">三种内存溢出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、-OutOfMemoryError：-PermGen-space"><span class="nav-number">3.1.</span> <span class="nav-text">一、 OutOfMemoryError： PermGen space</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二、-OutOfMemoryError：-Java-heap-space"><span class="nav-number">3.2.</span> <span class="nav-text">二、 OutOfMemoryError： Java heap space</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三、-OutOfMemoryError：unable-to-create-new-native-thread"><span class="nav-number">3.3.</span> <span class="nav-text">三、 OutOfMemoryError：unable to create new native thread</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -280,7 +280,135 @@
             
               
                 
-                <a class="post-title-link" href="/2016/07/25/ajax方法局限性/" itemprop="url">
+                <a class="post-title-link" href="/2016/07/27/eclipse-内存溢出/" itemprop="url">
+                  eclipse 内存溢出
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-27T16:21:23+08:00" content="2016-07-27">
+              2016-07-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/bug/" itemprop="url" rel="index">
+                    <span itemprop="name">bug</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/27/eclipse-内存溢出/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/27/eclipse-内存溢出/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>加VM参数： -Xms256M -Xmx512M -XX:PermSize=256m -XX:MaxPermSize=512m</p>
+<h3 id="原理说明"><a href="#原理说明" class="headerlink" title="原理说明"></a>原理说明</h3><p>jvm管理的内存大致包括三种不同类型的内存区域：Permanent Generation space（永久保存区域）、Heap space(堆区域)、Java Stacks(Java栈）。</p>
+<p>其中永久保存区域主要存放Class（类）和Meta的信息，Class第一次被Load的时候被放入PermGen space区域，Class需要存储的内容主要包括方法和静态属性。堆区域用来存放Class的实例（即对象），对象需要存储的内容主要是非静态属性。每次用new创建一个对象实例后，对象实例存储在堆区域中，这部分空间也被jvm的垃圾回收机制管理。而Java栈跟大多数编程语言包括汇编语言的栈功能相似，主要基本类型变量以及方法的输入输出参数。Java程序的每个线程中都有一个独立的堆栈。</p>
+<h3 id="三种内存溢出"><a href="#三种内存溢出" class="headerlink" title="三种内存溢出"></a>三种内存溢出</h3><h4 id="一、-OutOfMemoryError：-PermGen-space"><a href="#一、-OutOfMemoryError：-PermGen-space" class="headerlink" title="一、 OutOfMemoryError： PermGen space"></a>一、 OutOfMemoryError： PermGen space</h4><p>增加java虚拟机中的XX:PermSize和XX:MaxPermSize参数的大小，其中XX:PermSize是初始永久保存区域大小，XX:MaxPermSize是最大永久保存区域大小。</p>
+<h4 id="二、-OutOfMemoryError：-Java-heap-space"><a href="#二、-OutOfMemoryError：-Java-heap-space" class="headerlink" title="二、 OutOfMemoryError： Java heap space"></a>二、 OutOfMemoryError： Java heap space</h4><ol>
+<li>检查程序，看是否有死循环或不必要地重复创建大量对象。找到原因后，修改程序和算法。</li>
+<li>增加Java虚拟机中Xms（初始堆大小）和Xmx（最大堆大小）参数的大小。 </li>
+</ol>
+<h4 id="三、-OutOfMemoryError：unable-to-create-new-native-thread"><a href="#三、-OutOfMemoryError：unable-to-create-new-native-thread" class="headerlink" title="三、 OutOfMemoryError：unable to create new native thread"></a>三、 OutOfMemoryError：unable to create new native thread</h4><p>针对无法创建更多本地线程的情况，调整线程栈的大小，添加-Xss选项<br>JAVA_OPTS=”-Xms2048M -Xmx2048M -Xmn512M -Xss256k -XX:PermSize=512M…”</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/07/26/ajax方法局限性/" itemprop="url">
                   ajax方法局限性
                 </a>
               
@@ -294,8 +422,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-25T20:09:06+08:00" content="2016-07-25">
-              2016-07-25
+            <time itemprop="dateCreated" datetime="2016-07-26T20:09:06+08:00" content="2016-07-26">
+              2016-07-26
             </time>
           </span>
 
@@ -324,8 +452,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/25/ajax方法局限性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/ajax方法局限性/" itemprop="commentsCount"></span>
+                <a href="/2016/07/26/ajax方法局限性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/26/ajax方法局限性/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1208,7 +1336,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
