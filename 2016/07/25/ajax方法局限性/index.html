@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ajax," />
 
 
 
@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="随笔记录">
-<meta property="og:type" content="website">
-<meta property="og:title" content="记忆云">
-<meta property="og:url" content="https://wujianping125.github.io/tags/bug/index.html">
+<meta name="description" content="ajax方法不能用于文件导入导出，导入导出要用form表单的submit提交
+ajax方法后台不能没有返回直接重定向，重定向也要用form表单的submit提交
+form表单submit提交 method=”get” 时，action地址的后面跟参数(?id=…)会不起作用，要用post方法提交">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax方法局限性">
+<meta property="og:url" content="https://wujianping125.github.io/2016/07/25/ajax方法局限性/index.html">
 <meta property="og:site_name" content="记忆云">
-<meta property="og:description" content="随笔记录">
+<meta property="og:description" content="ajax方法不能用于文件导入导出，导入导出要用form表单的submit提交
+ajax方法后台不能没有返回直接重定向，重定向也要用form表单的submit提交
+form表单submit提交 method=”get” 时，action地址的后面跟参数(?id=…)会不起作用，要用post方法提交">
+<meta property="og:updated_time" content="2016-07-25T12:13:10.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记忆云">
-<meta name="twitter:description" content="随笔记录">
+<meta name="twitter:title" content="ajax方法局限性">
+<meta name="twitter:description" content="ajax方法不能用于文件导入导出，导入导出要用form表单的submit提交
+ajax方法后台不能没有返回直接重定向，重定向也要用form表单的submit提交
+form表单submit提交 method=”get” 时，action地址的后面跟参数(?id=…)会不起作用，要用post方法提交">
 
 
 
@@ -113,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="https://wujianping125.github.io/tags/bug/"/>
+  <link rel="canonical" href="https://wujianping125.github.io/2016/07/25/ajax方法局限性/"/>
 
-  <title> 标签: bug | 记忆云 </title>
+  <title> ajax方法局限性 | 记忆云 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -145,7 +152,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,46 +263,157 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        bug
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ajax方法局限性
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-25T20:09:06+08:00" content="2016-07-25">
+              2016-07-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">ajax</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/25/ajax方法局限性/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/ajax方法局限性/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <ol>
+<li>ajax方法不能用于文件导入导出，导入导出要用form表单的submit提交</li>
+<li>ajax方法后台不能没有返回直接重定向，重定向也要用form表单的submit提交</li>
+<li>form表单submit提交 method=”get” 时，action地址的后面跟参数(?id=…)会不起作用，要用post方法提交</li>
+</ol>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/07/25/Illegal-character-问题/" itemprop="url">
-              
-                <span itemprop="name">Illegal character 问题</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-25T19:36:36+08:00"
-              content="2016-07-25" >
-          07-25
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ajax/" rel="tag">#ajax</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/25/Illegal-character-问题/" rel="next" title="Illegal character 问题">
+                <i class="fa fa-chevron-left"></i> Illegal character 问题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -303,6 +421,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/25/ajax方法局限性/"
+           data-title="ajax方法局限性" data-url="https://wujianping125.github.io/2016/07/25/ajax方法局限性/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -322,8 +448,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -373,6 +508,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -469,6 +615,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

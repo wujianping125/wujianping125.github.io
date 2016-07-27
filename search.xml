@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[ajax方法局限性]]></title>
+      <url>https://wujianping125.github.io/2016/07/25/ajax%E6%96%B9%E6%B3%95%E5%B1%80%E9%99%90%E6%80%A7/</url>
+      <content type="html"><![CDATA[<ol>
+<li>ajax方法不能用于文件导入导出，导入导出要用form表单的submit提交</li>
+<li>ajax方法后台不能没有返回直接重定向，重定向也要用form表单的submit提交</li>
+<li>form表单submit提交 method=”get” 时，action地址的后面跟参数(?id=…)会不起作用，要用post方法提交</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Illegal character 问题]]></title>
       <url>https://wujianping125.github.io/2016/07/25/Illegal-character-%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.net.URISyntaxException: Illegal character in query at index <span class="number">59</span></span><br></pre></td></tr></table></figure>
